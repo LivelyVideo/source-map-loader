@@ -8,7 +8,14 @@ import schema from "./options.json";
 import { getSourceMappingURL, fetchFromURL, flattenSourceMap } from "./utils";
 
 export default async function loader(input, inputMap) {
-  const options = this.getOptions(schema);
+  // const options = this.getOptions(schema);
+  // disabled because it triggers the following error:
+  //
+  // ERROR in ./node_modules/@storybook/core/dist/server/preview/globals.js
+  // Module build failed (from /home/ilya/Projects/source-map-loader/dist/cjs.js):
+  // TypeError: this.getOptions is not a function
+  //     at Object.loader (/home/ilya/Projects/source-map-loader/dist/index.js:21:24)
+  const options = schema;
   const { sourceMappingURL, replacementString } = getSourceMappingURL(input);
   const callback = this.async();
 

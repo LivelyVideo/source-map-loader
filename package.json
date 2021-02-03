@@ -1,7 +1,7 @@
 {
-  "name": "source-map-loader",
+  "name": "@livelyvideo/source-map-loader",
   "version": "2.0.0",
-  "description": "extracts inlined source map and offers it to webpack",
+  "description": "Fork of original source-map-loader with removed ability to set options because of bug",
   "license": "MIT",
   "repository": "webpack-contrib/source-map-loader",
   "author": "Tobias Koppers @sokra",
